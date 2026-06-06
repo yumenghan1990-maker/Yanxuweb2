@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YanXu — AI 作品集</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Vanta 背景容器 -->
+  <div id="vanta-bg"></div>
+
+  <!-- 噪点遮罩 -->
+  <div class="noise-overlay"></div>
+
+  <div class="page-wrapper">
+
+    <!-- ===== 英雄区 ===== -->
+    <header class="hero">
+      <div class="avatar-ring">
+        <img src="avatar.jpg" alt="YanXu Avatar" class="avatar" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 120 120%22%3E%3Ccircle cx=%2260%22 cy=%2260%22 r=%2260%22 fill=%22%230d0d1a%22/%3E%3Ccircle cx=%2260%22 cy=%2248%22 r=%2222%22 fill=%22%2300f0ff%22 opacity=%220.8%22/%3E%3Cellipse cx=%2260%22 cy=%22100%22 rx=%2234%22 ry=%2228%22 fill=%22%2200f0ff%22 opacity=%220.6%22/%3E%3C/svg%3E'" />
+      </div>
+
+      <h1 class="glitch-title" data-text="YanXu 的 AI 作品集">YanXu 的 AI 作品集</h1>
+      <p class="subtitle">欢迎和我一起玩 AI ~~</p>
+
+      <div class="social-links">
+        <a href="https://www.xiaohongshu.com/user/profile" target="_blank" rel="noopener" class="social-chip xhs">
+          <span class="chip-icon">📕</span>
+          <span>小红书 @星星小旭呀</span>
+        </a>
+        <a href="mailto:yumenghan1990@gmail.com" class="social-chip mail">
+          <span class="chip-icon">✉</span>
+          <span>yumenghan1990@gmail.com</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- ===== AI 游戏区 ===== -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="section-tag">🎮</span> 我的 AI 游戏
+      </h2>
+
+      <div class="card-grid">
+
+        <a href="https://dun.yanxu2018.com" target="_blank" rel="noopener" class="game-card" style="--accent:#00f0ff">
+          <div class="card-glow"></div>
+          <div class="card-inner">
+            <div class="card-icon">🚀</div>
+            <h3 class="card-title">星际先锋</h3>
+            <p class="card-desc">AI 驱动的太空策略游戏，挑战你的战术极限</p>
+            <div class="card-footer">
+              <span class="card-link">dun.yanxu2018.com →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://five.yanxu2018.com" target="_blank" rel="noopener" class="game-card" style="--accent:#bf00ff">
+          <div class="card-glow"></div>
+          <div class="card-inner">
+            <div class="card-icon">⚫</div>
+            <h3 class="card-title">五子棋</h3>
+            <p class="card-desc">经典博弈游戏，与 AI 对手一较高下</p>
+            <div class="card-footer">
+              <span class="card-link">five.yanxu2018.com →</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ===== 页脚 ===== -->
+    <footer class="site-footer">
+      <p>© 2026 YanXu · Built with AI &amp; ❤</p>
+    </footer>
+
+  </div><!-- /page-wrapper -->
+
+  <!-- Three.js + Vanta.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+
+  <script>
+    VANTA.BIRDS({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      backgroundColor: 0x05050f,
+      color1: 0x00f0ff,
+      color2: 0xbf00ff,
+      colorMode: "lerpGradient",
+      birdSize: 1.2,
+      wingSpan: 28,
+      speedLimit: 4.0,
+      separation: 60,
+      alignment: 50,
+      cohesion: 50,
+      quantity: 3,
+    });
+  </script>
+
+</body>
+</html>
